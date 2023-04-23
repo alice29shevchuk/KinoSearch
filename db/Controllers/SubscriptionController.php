@@ -1,5 +1,5 @@
 <?php
-include_once 'ORM/Controllers/Controller.php';
+include_once 'db/Controllers/Controller.php';
 class SubscriptionController extends Controller{
 
 }

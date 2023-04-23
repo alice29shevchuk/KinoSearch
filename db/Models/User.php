@@ -1,7 +1,7 @@
 <?php
 include_once 'IObject.php';
 class User implements IObject {
-    private $id;
+    public $id;
     private $login;
     private $password;
     private $subscriptionId;
@@ -14,7 +14,7 @@ class User implements IObject {
     }
     public function __toString()
     {
-        return "Id: ".$this->id."Login: ".$this->login."Password: ".$this->password."Subscription Id: ".$this->subscriptionId;
+        return "Id: ".$this->id.'<br>'."Login: ".$this->login.'<br>'."Password: ".$this->password.'<br>'."Subscription Id: ".$this->subscriptionId;
     }
 
     public function Equals($object)
