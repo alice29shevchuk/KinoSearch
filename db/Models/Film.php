@@ -1,16 +1,16 @@
 <?php
 include_once 'IObject.php';
 class Film implements IObject {
-    private $id;
-    private $title;
-    private $year;
-    private $image;
-    private $rating;
-    private $duration;
-    private $country;
-    private $genreId;
-    private $isPopularId;
-    private $memberId;
+    public $id;
+    public $title;
+    public $year;
+    public $image;
+    public $rating;
+    public $duration;
+    public $country;
+    public $genreId;
+    public $isPopularId;
+    public $memberId;
     public function __construct($id,$title,$country,$duration,$image,$genreId,$year,$rating,$isPopularId,$memberId)
     {
         $this->id=$id;

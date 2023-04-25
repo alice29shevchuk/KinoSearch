@@ -1,8 +1,8 @@
 <?php
 include_once 'IObject.php';
 class Role implements IObject{
-    private $id;
-    private $title;
+    public $id;
+    public $title;
     public function __construct($id,$title)
     {
         $this->id=$id;

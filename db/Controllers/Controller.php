@@ -1,10 +1,11 @@
 <?php
 abstract class Controller{
-    private $connection;
-    private $listObject;
+    protected $connection;
+    protected $listObject;
     public function __construct($connection){
         $this->connection = $connection;
         $this->listObject = array();
+        $this->getListModel();
     }
     public function Add($object){
         array_push($this->listObject,$object);
@@ -32,7 +33,13 @@ abstract class Controller{
         return $this->listObject[$id];
     }
     public function SelectByFilter($filter){
-        return array_filter($this->listObject,$filter);
+        $temp = array_filter($this->listObject,$filter);
+        $returnedList = array();
+        foreach ($temp as $item){
+            array_push($returnedList,$item);
+        }
+        return $returnedList;
     }
+    abstract function getListModel();
 }
 ?>

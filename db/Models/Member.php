@@ -1,9 +1,9 @@
 <?php
 include_once 'IObject.php';
 class Member implements IObject{
-    private $id;
-    private $fullName;
-    private $roleId;
+    public $id;
+    public $fullName;
+    public $roleId;
     public function __construct($id,$fullName,$roleId)
     {
         $this->id=$id;
