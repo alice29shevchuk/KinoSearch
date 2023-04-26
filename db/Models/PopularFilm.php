@@ -1,6 +1,6 @@
 <?php
-include_once 'IObject.php';
-class PopularFilm implements IObject {
+include_once 'IAliceObjects.php';
+class PopularFilm implements IAliceObjects {
     private $id;
     public function __construct($id)
     {

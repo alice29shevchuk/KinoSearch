@@ -1,10 +1,10 @@
 <?php
-include_once 'IObject.php';
-class User implements IObject {
-    private $id;
-    private $login;
-    private $password;
-    private $subscriptionId;
+include_once 'IAliceObjects.php';
+class User implements IAliceObjects {
+    public $id;
+    public $login;
+    public $password;
+    public $subscriptionId;
     public function __construct($id,$login,$password,$subscriptionId)
     {
         $this->id=$id;
@@ -12,9 +12,15 @@ class User implements IObject {
         $this->password=$password;
         $this->subscriptionId=$subscriptionId;
     }
+    public function getLogin(){
+        return $this->login;
+    }
+    public function getPass(){
+        return $this->password;
+    }
     public function __toString()
     {
-        return "Id: ".$this->id."Login: ".$this->login."Password: ".$this->password."Subscription Id: ".$this->subscriptionId;
+        return "Id: ".$this->id.'<br>'."Login: ".$this->login.'<br>'."Password: ".$this->password.'<br>'."Subscription Id: ".$this->subscriptionId;
     }
 
     public function Equals($object)

@@ -1,9 +1,9 @@
 <?php
-include_once 'IObject.php';
-class Member implements IObject{
-    private $id;
-    private $fullName;
-    private $roleId;
+include_once 'IAliceObjects.php';
+class Member implements IAliceObjects{
+    public $id;
+    public $fullName;
+    public $roleId;
     public function __construct($id,$fullName,$roleId)
     {
         $this->id=$id;

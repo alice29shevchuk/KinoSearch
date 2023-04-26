@@ -1,6 +1,6 @@
 <?php
-include_once 'IObject.php';
-class Subscription implements IObject{
+include_once 'IAliceObjects.php';
+class Subscription implements IAliceObjects{
     private $id;
     private $title;
     private $price;
